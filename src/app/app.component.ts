@@ -1,5 +1,5 @@
+import { SimplePlaceholderMapper } from '@angular/compiler/src/i18n/serializers/serializer';
 import { Component } from '@angular/core';
-import { fromEvent } from 'rxjs';
 import * as moment from 'moment';
 
 @Component({
@@ -9,13 +9,26 @@ import * as moment from 'moment';
 })
 export class AppComponent {
   title = 'chronocrator';
-  hours = moment().format('h');
+  hours = moment().diff(moment().startOf('day'), 'hours').toString();
   minutes = moment().format('mm');
   milliseconds = moment().diff(moment().startOf('day'), 'milliseconds');
   seconds = moment().diff(moment().startOf('day'), 'seconds');
-  dives = Math.trunc(this.milliseconds / 45000);
-  remainingMetrics = ['fifth', 'sixth', 'seventh', 'eighth'];
-  currentMetrics = ['first'];
+  // dives = Math.trunc(this.milliseconds / 45000);
+  remainingMetrics = [
+    {
+      duration: 2700000,
+      agent: "antelope",
+      product: "an escape"
+    }
+  ];
+  currentMetrics = [
+    {
+      duration: 2700000,
+      agent: "spider",
+      product: "a web"
+    }
+
+  ];
 
   ngAfterViewInit() {
   }

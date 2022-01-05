@@ -1,6 +1,10 @@
-p {
+.currentTime, .metricParagraph {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.5em;
+}
+
+.footerText {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h1 {

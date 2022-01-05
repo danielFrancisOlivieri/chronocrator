@@ -6,11 +6,10 @@
 </div>
 <br />
 <div class="container has-text-centered unit-container">
-  <p> We are <span> {{hours}} </span> hours and <span> {{minutes}} </span> minutes into the day. </p>
+  <p class="currentTime" > We are <span> {{hours}} </span> hours and <span> {{minutes}} </span> minutes into the day. </p>
   <br />
   <div class="notification is-light has-text-centered" *ngFor="let metric of currentMetrics">
-    <p> That's {{dives}} dives of an antelope {{metric}} </p>
-    <p> And {{seconds}} seconds </p>
+    <p class="metricParagraph" > That's {{milliseconds / metric.duration | number: '1.0-0' }} as long as it takes a {{metric.agent}} to make {{metric.product}} </p>
   </div>
 </div>
 
@@ -35,7 +34,7 @@
 <footer class="footer">
 
   <div class="content has-text-centered">
-    <p> 
+    <p class="footerText" > 
       Made by Daniel Olivieri using Bulma with a favicon made by <a href="https://www.flaticon.com/authors/justicon" target="_blank" >justicon</a> 
     </p>
 
