@@ -16,15 +16,24 @@ export class AppComponent {
   // dives = Math.trunc(this.milliseconds / 45000);
   remainingMetrics = [
     {
-      duration: 2700000,
-      agent: "antelope",
-      product: "an escape"
+      duration: 3780029,
+      agent: "",
+      action: "listen to",
+      product: "Folklore"
+    },
+    {
+      duration: 223013,
+      agent: "Hicham El Guerrouj",
+      action: "run",
+      product: "a mile"
+      
     }
   ];
   currentMetrics = [
     {
       duration: 2700000,
-      agent: "spider",
+      agent: "a spider",
+      action: "make",
       product: "a web"
     }
 
@@ -39,7 +48,7 @@ export class AppComponent {
   }
 
   updateTime() {
-    this.hours = moment().format('h');
+    this.hours = moment().diff(moment().startOf('day'), 'hours').toString();
     this.minutes = moment().format('mm'); 
     this.seconds = moment().diff(moment().startOf('day'), 'seconds')
   }
