@@ -18,13 +18,13 @@ export class AppComponent {
     {
       duration: 3780029,
       agent: "",
-      action: "listen to",
+      action: "listen 👂 to ",
       product: "Folklore"
     },
     {
       duration: 223013,
       agent: "Hicham El Guerrouj",
-      action: "run",
+      action: "run 🏃",
       product: "a mile"
       
     }
@@ -32,9 +32,9 @@ export class AppComponent {
   currentMetrics = [
     {
       duration: 2700000,
-      agent: "a spider",
+      agent: "a spider 🕷️",
       action: "make",
-      product: "a web"
+      product: "a web 🕸️"
     }
 
   ];
